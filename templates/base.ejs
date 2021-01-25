@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>Titre de la page</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <script src="https://kit.fontawesome.com/6e8819fbe3.js" crossorigin="anonymous"></script>
+        <script src=""></script>
+    </head>
+    <body>
+        <%- include ('header.ejs') %>
+        <div class="container">
+            <%- include (template_name) %>
+        </div>
+        <%- include ('footer.ejs') %>
+    </body>
+</html>

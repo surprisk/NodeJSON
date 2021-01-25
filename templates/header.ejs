@@ -1,0 +1,26 @@
+<style>
+    .nav-link{ color: blue;}
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/"><img style="width: 4em" src="images/logo-node.png"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <% if (user) { %>
+            <a class="nav-link" href="compte"><img src="images/connected.svg"style="width: 2em"> <div style="display:inline-flex; align-items: center; margin: auto 1em auto 1em">Bonjour <%= user.firstname %> </div></a>
+          <% } else { %>
+            <a class="nav-link" href="connexion"><img src="images/login.svg"style="width: 2em"> <div style="display:inline-flex; align-items: center; margin: auto 1em auto 1em">Connexion </div></a>
+          <% } %>
+        </li>
+        <% if (user) { %>
+        <li class="nav-item">
+          <a class="nav-link" href="deconnexion"><img src="images/logout.svg" style="width: 2em"> <div style="display:inline-flex; align-items: center; margin: auto 1em auto 1em">Déconnexion</div></a>
+        </li>
+        <% } %>
+      </ul>
+    </div>
+  </nav>

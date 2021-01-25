@@ -1,0 +1,56 @@
+<hr>
+<% if(notification) { %>
+    <div class="<%= classNotification %>" role="alert"> <%= notification %> </div>
+<% } %>
+<div class='row'>
+    <div class='col-xl-5'>
+<h1 class='py-3'>Connexion</h1>
+
+<form action="" method="POST" class='py-5'>
+<div class="form-group">
+    <label for="utilisateur">Utilisateur</label>
+    <input type="text" name="user" class="form-control" id="utilisateur" aria-describedby="utilisateurHelp" placeholder="Entrez votre identifiant">
+    <small id="utilisateurHelp" class="form-text text-muted">Ne donnez pas votre identifiant à n'importe qui.</small>
+</div>
+<div class="form-group">
+    <label for="exampleInputPassword1">Mot de passe</label>
+    <input type="password" name="pwd" class="form-control" id="exampleInputPassword1" placeholder="Entrez votre mot de passe">
+</div>
+</fieldset>
+    <button type="submit" class="btn btn-primary">Accéder</button>
+</fieldset>
+</form>
+</div>
+<div class='col-xl-5 offset-xl-2'>
+<h1 class='py-3'>Inscription</h1>
+<form action="" method="POST" class='py-5'>
+    <div class="form-group">
+        <label for="user_new">Utilisateur</label>
+        <input type="text" name="user_new" class="form-control" id="user_new" aria-describedby="utilisateurHelp" placeholder="Entrez votre identifiant">
+        <small id="utilisateurHelp" class="form-text text-muted">Ne donnez pas votre identifiant à n'importe qui.</small>
+    </div>
+    <div class="form-group">
+        <label for="pwd_new">Mot de passe</label>
+        <input type="password" name="pwd_new" class="form-control" id="pwd_new" aria-describedby="pwdHelp" placeholder="Entrez votre mot de passe">
+        <small id="pwdHelp" class="form-text text-muted">Nous vous recommandons de composer votre mot de passe avec 8 caractères au minimum ainsi que 1 caractère spécial, 1 majuscule, 1 minuscule et 1 numérique. Par flemme du dev il n'y a pas de regex sur ce form.</small>
+
+    </div>
+    <div class="form-group">
+        <label for="pwd_confirm">Confirmez le mot de passe</label>
+        <input type="password" name="pwd_confirm" class="form-control" id="pwd_confirm" placeholder="Confirmez votre mot de passe">
+    </div>
+    <div class="form-group">
+        <label for="lastname_new">Nom</label>
+        <input type="text" name="lastname_new" class="form-control" id="lastname_new" placeholder="Entrez votre nom">
+    </div>
+    <div class="form-group">
+        <label for="firstname_new">Prenom</label>
+        <input type="text" name="firstname_new" class="form-control" id="firstname_new" placeholder="Entrez votre prénom">
+    </div>
+    </fieldset>
+        <button type="submit" class="btn btn-primary">S'inscrire</button>
+    </fieldset>
+    </form>
+    </div>
+</div>
+<hr>

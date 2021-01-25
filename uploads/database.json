@@ -1,0 +1,1 @@
+{"database":{"1":{"firstname":"Admin","lastname":"Admin","user":"admin","pwd":"admin","role":"ROLE_ADMIN"},"2":{"firstname":"User","lastname":"User","user":"user","pwd":"user","role":"ROLE_USER"},"4":{"firstname":"Test","lastname":"Test","user":"test","pwd":"test","role":"ROLE_USER"}}}

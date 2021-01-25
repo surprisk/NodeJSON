@@ -1,0 +1,47 @@
+<hr>
+<h1 class='py-3'>Liste des Utilisateurs</h1>
+<% if(notification) { %>
+    <div class="<%= classNotification %>" role="alert"> <%= notification %> </div>
+<% } %>
+<div class='py-5'>
+    <table class="table table-hover">
+        <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Utilisateur</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Prénom</th>
+            <th scope="col">Role</th>
+            <th scope="col">Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% db.forEach(function(user){ %>
+        <tr class="table-light">
+            <th scope="row"><%= user['0'] %></td>
+            <td><%= user['1']['user'] %></td>
+            <td><%= user['1']['lastname'] %></td>
+            <td><%= user['1']['firstname'] %></td>
+            <td><form action="utilisateurs/edition/<%= user['0'] %>" method="GET">
+                <div class="form-group">
+                <!-- <label for="role">Choisir un rôle</label> -->
+                <select class="form-control" name="role" id="role">
+                    <option value="<%= user['1']['role'] %>"> 
+                        <% if(user['1']['role'] == 'ROLE_ADMIN'){ %>
+                             Administrateur
+                             <option value="ROLE_USER">Utilisateur</option>
+                            </option>
+                         <% } else { %>
+                             Utilisateur
+                            </option>
+                            <option value="ROLE_ADMIN">Administrateur</option>
+                         <% } %>
+                </select>
+            </div>
+            <!-- <%= user['1']['role'] %>--></td> 
+            <td><a href="utilisateurs/suppression/<%= user['0'] %>"><i style='margin: 10px' class="fas fa-trash"></i></a><button style='border-style: none; background: none; color: #2780e3' type="submit"><i style='margin: 10px' class="fas fa-pen"></i></button></form></td>
+        </tr>
+        <% }); %>
+        </tbody>
+    </table>
+</div>
